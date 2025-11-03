@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors()); // Allows your website to talk to this server
 app.use(express.json()); // Allows server to read JSON
+app.use(express.static(__dirname)); // <-- ADD THIS LINE
 
 // Initialize our 20 parking slots. 'false' means available.
 let parkingSlots = new Array(20).fill(false);
