@@ -1,7 +1,7 @@
 // *** IMPORTANT ***
 // If you test locally, use: 'http://localhost:3000'
 // After deploying, change this to your live server URL!
-const API_URL = 'http://localhost:3000'; 
+const API_URL = 'https://mpmc-project.onrender.com'; 
 
 const parkingLot = document.getElementById('parking-lot');
 const bookButton = document.getElementById('bookButton');
