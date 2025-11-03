@@ -1,20 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // <-- 1. ADD THIS LINE
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors()); // Allows your website to talk to this server
 app.use(express.json()); // Allows server to read JSON
 app.use(express.static(__dirname)); // <-- ADD THIS LINE
-// This line lets your server find style.css and script.js
-app.use(express.static(__dirname)); 
 
-// 2. ADD THIS BLOCK
-// This new line specifically sends index.html when someone visits the main URL
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 // Initialize our 20 parking slots. 'false' means available.
 let parkingSlots = new Array(20).fill(false);
