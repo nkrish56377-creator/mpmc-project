@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#bookButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#bookButton:hover {
+    background-color: #45a049;
+}
+
+#bookButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#message {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.parking-lot {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slot {
+    width: 100px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: help;
+}
+
+.slot.available {
+    background-color: #e8f5e9; /* Light green */
+    color: #388e3c;
+    border-color: #a5d6a7;
+}
+
+.slot.booked {
+    background-color: #ffebee; /* Light red */
+    color: #d32f2f;
+    border-color: #ef9a9a;
+    cursor: pointer; /* Allow clicking to release */
+}
